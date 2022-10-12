@@ -1,0 +1,54 @@
+ <%- include('./layout/header.ejs')%>
+ <body>
+    <%- include('./layout/navbar.ejs')%>
+    <div class="container-fluid bg-color-light">
+      <div
+        class="row justify-content-center vh-100 books"
+      >
+        <div class="col-sm-9 my-4 text-center">
+          <h1 class="text-uppercase fw-bold under-costruction">Under construction</h1>
+        </div>
+      </div>
+      <div class="row stay-in-touch bg-color-blue">
+        <div class="col-9 col-md-8 col-lg-6 col-xxl-5 mx-auto text-center my-5 py-5">
+          <div class="mb-2">
+            <h2 class="text-uppercase fw-bold mb-5">Stay in Touch</h2>
+          </div>
+          <div class="mb-3 sign-up">
+            <p class="text-start">
+              Enter your email to join the community of
+              <span class="count"><%=data%></span> book lovers. We'll be sending out
+              our newsletter monthly or so - hope you find it enjoyable.
+            </p>
+            <form
+              action="/books"
+              method="POST"
+              class="newsletter-form d-flex flex-column justify-content-start align-items-start flex-md-row align-items-md-end"
+              id="sign-up-form"
+            >
+              <input
+                name="email"
+                type="email"
+                class="p-2 mt-2 w-75"
+                placeholder="Your email address"
+                id="email-value"
+                required
+              />
+              <button
+                type="submit"
+                class="btn btn-custom btn-light sign-up-btn-books p-2 mt-4 ms-md-3"
+              >
+                Join Now
+              </button>
+            </form>
+            <p class="text-start pt-2 hide error">Hey! You are already on our list.</p>
+          </div>
+          <div class="mb-3 sign-up-response hide">
+            <p>Thank you for signing up for the Barry Blue Books newsletter!</p>
+          </div>
+        </div>
+      </div>
+      <%- include('./layout/footer.ejs')%>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,510 @@
+/* === GLOBAL STYLES === */
+
+:root {
+  --cl-bg-dark: rgb(20, 11, 10);
+  --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
+  --cl-bg-dark-transp-light: rgba(20, 11, 10, 0.4);
+  --cl-bg-medium: rgb(226, 174, 119);
+  --cl-bg-light: rgb(238, 199, 148);
+  --cl-bg-extra-light: rgb(251, 241, 227);
+  --cl-blue: rgb(65, 105, 224);
+  --cl-blue-transp: rgb(65, 105, 224, 0.8);
+  --cl-font-dark: rgb(19, 19, 19);
+  --cl-font-light: rgb(53, 53, 53);
+  --cl-font-light-transp: rgba(53, 53, 53, 0.5);
+  --cl-font-contrast-dark: rgb(158, 115, 69);
+  --cl-font-contrast-light: rgb(226, 174, 119);
+  --cl-white: rgb(255, 255, 255);
+  --cl-error: rgb(163, 35, 35);
+  --font-main: "Titillium Web", sans-serif;
+  --font-special: "Dosis", sans-serif;
+  --transition: all 0.5s;
+  --trasition-slow: all 0.8s;
+}
+
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--cl-font-light);
+}
+
+h1,
+h2 {
+  font-family: var(--font-special);
+  color: var(--cl-font-dark);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--cl-font-contrast-light);
+  opacity: 60%;
+}
+
+a {
+  color: var(--cl-font-contrast-light);
+}
+
+a:hover {
+  color: var(--cl-blue);
+}
+
+button {
+  border: none;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  color: var(--cl-font-dark);
+  letter-spacing: 2px;
+}
+
+::placeholder {
+  color: var(--cl-font-light-transp);
+  letter-spacing: 2px;
+}
+
+/* === COMPONENTS === */
+
+/* =Buttons= */
+.btn-custom {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.btn-custom {
+  transition: var(--transition);
+}
+
+.btn-blue {
+  background-color: var(--cl-blue);
+  color: var(--cl-white);
+}
+
+.btn-blue:hover {
+  background-color: var(--cl-bg-light);
+  color: var(--cl-font-dark);
+}
+
+.btn-dark {
+  background-color: var(--cl-font-dark);
+  color: var(--cl-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--cl-font-contrast-dark);
+}
+
+.btn-white {
+  background-color: var(--cl-white);
+  color: var(--cl-font-dark);
+}
+
+.btn-white:hover {
+  background-color: var(--cl-bg-light);
+}
+
+.btn-light {
+  background-color: var(--cl-bg-light);
+  color: var(--cl-font-dark);
+}
+
+.btn-light:hover {
+  background-color: var(--cl-font-dark);
+  color: var(--cl-bg-light);
+}
+
+.to-top {
+  display: none;
+  position: fixed;
+  color: var(--cl-blue);
+  font-size: 3rem;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+}
+
+.to-top:hover {
+  color: var(--cl-font-contrast-dark);
+}
+
+/* =Backgounds= */
+
+.bg-transp {
+  background-color: var(--cl-bg-dark-transp);
+}
+
+.bg-transp-light {
+  background-color: var(--cl-bg-dark-transp-light);
+}
+
+.bg-color-light {
+  background-color: var(--cl-bg-light);
+}
+
+.bg-color-dark {
+  background-color: var(--cl-bg-dark);
+  color: var(--cl-font-contrast-light);
+}
+
+.bg-color-blue {
+  background-color: var(--cl-blue-transp);
+}
+
+/* =Blue-span= */
+.cl-blue {
+  color: var(--cl-blue);
+}
+
+/* === NAVBAR === */
+
+.logo {
+  width: 130px;
+}
+
+.navbar-custom {
+  background-color: var(--cl-bg-dark);
+}
+
+/* change the link color */
+.nav-link {
+  color: var(--cl-font-contrast-light);
+}
+
+/* change the color of hovered links */
+
+.nav-link:hover {
+  color: var(--cl-blue);
+}
+
+/* active state for nav bar links */
+.active-state {
+  color: var(--cl-blue);
+}
+
+/* change the color of toggler icon */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(226,174,119)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* === FOOTER === */
+
+.footer h2 {
+  color: var(--cl-font-contrast-light);
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+}
+
+.logo-small {
+  width: 25px;
+}
+
+/* === STAY IN TOUCH === */
+
+.newsletter h2 {
+  font-size: 3rem;
+}
+
+.count {
+  color: var(--cl-font-dark);
+  font-weight: 700;
+}
+
+.newsletter-form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--cl-font-dark);
+  outline: none;
+  /* width: 70%; */
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  color: var(--cl-error);
+  font-size: 1rem;
+}
+
+/* === HOME === */
+
+/* =Hero= */
+.hero {
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -71.07px;
+}
+
+.hero h1,
+.hero p {
+  color: var(--cl-font-contrast-light);
+}
+
+/* =News-Collection-Join= */
+
+.news-coll-join > div {
+  height: 400px;
+}
+
+.news-coll-join h2,
+.news-coll-join p {
+  color: var(--cl-white);
+}
+
+.news-coll-join h2 {
+  font-size: 3rem;
+}
+
+.news {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("/news.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.collection {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("/collection.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: 1px solid var(--cl-white);
+  border-bottom: 1px solid var(--cl-white);
+}
+
+.join {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("/join.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .collection {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--cl-white);
+    border-right: 1px solid var(--cl-white);
+  }
+}
+
+/* =Text overlay feature= */
+
+.overlay-home {
+  overflow: scroll;
+  position: absolute;
+  height: 0;
+  bottom: 100%;
+  transition: var(--trasition-slow);
+}
+
+.news:hover .overlay-home {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlay-home-hide {
+  overflow: hidden;
+  position: absolute;
+  transform: scale(1);
+  transition: var(--transition);
+}
+
+.news:hover .overlay-home-hide {
+  transform: scale(0);
+}
+
+/* =Featured Books= */
+
+.book-cover {
+  height: 450px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cover-1 {
+  background-image: url("/book-1.jpg");
+}
+
+.cover-2 {
+  background-image: url("/book-2.jpeg");
+}
+
+.cover-3 {
+  background-image: url("/book-3.png");
+}
+
+.cover-4 {
+  background-image: url("/book-4.jpeg");
+}
+
+/* === ABOUT US === */
+
+.about-us {
+  height: 550px;
+}
+
+.about-us-bg-1 {
+  background-image: url("/about-us-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-bg-2 {
+  background-image: url("/about-us-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-bg-3 {
+  background-image: url("/about-us-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* =Slider feature= */
+.slider-top,
+.slider-mid,
+.slider-bottom {
+  height: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  /* border: 1px solid black; */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+}
+
+.slide p {
+  position: absolute;
+  margin: 0 2rem;
+}
+
+.slide span {
+  display: block;
+  margin: 20px;
+}
+
+.dots-top,
+.dots-mid,
+.dots-bottom {
+  height: 10%;
+  padding-top: 7px;
+}
+
+.dot {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: solid 1px var(--cl-blue);
+  transition: var(--transition);
+}
+
+.dot:hover {
+  background-color: var(--cl-blue);
+}
+
+.dot-active {
+  background-color: var(--cl-blue);
+}
+
+/* === BOOKS === */
+
+.books {
+  background-image: url("/books.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -71.07px;
+}
+
+.under-costruction {
+  margin-top: 20rem;
+}
+
+/* === CONTACTS === */
+
+.contacts {
+  background-image: url("/contacts.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.contacts h2,
+.map h2,
+.message h2 {
+  font-size: 3rem;
+}
+
+.contacts h2,
+.map h2 {
+  color: var(--cl-font-contrast-light);
+}
+
+.contacts a {
+  font-weight: 700;
+}
+
+.contacts i {
+  font-size: 3rem;
+}
+
+.contacts a:hover {
+  color: var(--cl-font-contrast-light);
+}
+
+.contacts a:hover i {
+  color: var(--cl-blue);
+}
